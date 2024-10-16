@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>My Bookings</h2>
+    {% for booking in bookings %}
+        <p>
+            Passenger: {{ booking.passenger_name }} <br>
+            Flight: {{ booking.flight.from_city }} to {{ booking.flight.to_city }} on {{ booking.flight.date }} <br>
+            Booking Date: {{ booking.booking_date }}
+        </p>
+    {% else %}
+        <p>No bookings found.</p>
+    {% endfor %}
+{% endblock %}

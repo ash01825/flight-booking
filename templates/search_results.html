@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Available Flights</h2>
+<ul>
+    {% for flight in flights %}
+    <li>
+        {{ flight.from_city }} to {{ flight.to_city }} on {{ flight.date }} - ${{ flight.price }}
+        <a href="{{ url_for('book_flight', flight_id=flight.id) }}">Book</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

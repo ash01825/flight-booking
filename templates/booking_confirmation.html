@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Booking Confirmed!</h2>
+<p>Flight: {{ flight.from_city }} to {{ flight.to_city }} on {{ flight.date }}</p>
+<p>Passenger: {{ booking.passenger_name }}</p>
+<p>Booking Date: {{ booking.booking_date }}</p>
+{% endblock %}
